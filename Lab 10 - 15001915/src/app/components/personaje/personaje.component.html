@@ -1,0 +1,15 @@
+<div id="content">
+    <div id="foto">
+        @if (personaje.image) {
+        <img [src]="personaje.image">
+        } @else {
+        <img src="assets/futurama-placeholder.svg" />
+        }
+    </div>
+    <div id="info">
+        <div class="nombre">{{personaje.name}}</div>
+        <div style="text-transform: capitalize;">{{personaje.status}}</div>
+        <div>{{personaje.species}}</div>
+        <div>{{personaje.gender}}</div>
+    </div>
+</div>

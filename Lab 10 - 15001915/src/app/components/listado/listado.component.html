@@ -1,0 +1,17 @@
+<h1>Listado Futurama</h1>
+@if (cp.length > 0) {
+<div class="imagenes-seleccionadas">
+    @for(imagen of cp; track imagen.id) {
+    <img [src]="imagen.image">
+    }
+</div>
+}
+<div id="listado">
+    @for(personaje of respuesta.items; track personaje.id) {
+    <app-personaje [personaje]="personaje" (click)="setCurrentPersonaje(personaje)"></app-personaje>
+    }
+</div>
+<div class="botones-navegacion">
+    <button (click)="backPage()">&lt;</button>
+    <button (click)="nextPage()">&gt;</button>
+</div>
